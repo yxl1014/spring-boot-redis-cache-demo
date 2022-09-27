@@ -1,0 +1,19 @@
+server:
+  port: 8081
+spring:
+  mail:
+    host: "smtp.163.com" # 发件服务器地址,不同邮件平台地址不同
+    port: 25 #常用邮件端口25、109、110、143、465、995、993、994 如果开启了SSL安全则使用对应的端口号，25为非加密端口号
+    username: 123456@163.com #发送邮件的账号
+    #这个密码怎么获取 看这个网址 https://blog.csdn.net/qq_41681904/article/details/124276026
+    password: 123456 #发送邮件账号的授权码,这里的授权码不是验证码.需要到邮箱
+    default-encoding: utf-8 #设置编码
+    properties: # 设置邮件超时时间防止服务器阻塞
+      timeout: 5000
+      connection-timeout: 5000
+      write-timeout: 5000
+  thymeleaf:
+    cache: false
+    mode: LEGACYHTML5 #类型
+    prefix: classpath:/templates/ #模板存放的位置
+    suffix: .html #模板的后缀
